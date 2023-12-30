@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body data-bs-theme="dark">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h2>GUESS NUMBER GAME</h2>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <div class="container about">
+        <h2>About Guess Number Game</h2>
+        <div class="clearfix">
+            <img src="image.jpg" class="col-md-3 float-md-end mb-3 ms-md-3" alt="Image Loding" width="280px">
+            <p>Welcome to our exhilarating "Guess the Number" game, where the thrill of anticipation meets universal
+                appeal. Built for users of all ages and skill levels, our game is designed to deliver a captivating and
+                inclusive experience. Whether you're a seasoned gamer or a casual player, embark on a journey of
+                numerical discovery that transcends boundaries.</p>
+            <p>At the heart of our game is the perfect blend of simplicity and challenge, ensuring engagement for
+                everyone. We believe in the power of games to unite, entertain, and stimulate the mind. With intuitive
+                controls and dynamic difficulty levels, this game adapts to individual preferences, making it an
+                enjoyable pastime for diverse players.</p>
+            <p>Join a vibrant community of number enthusiasts, and let the excitement of guessing keep you entertained.
+                Our "Guess the Number" game is more than just a digital pursuit—it's a universal adventure that brings
+                people together through the joy of guessing. Get ready to unlock the mystery of numbers and share the
+                fun with friends and family.</p>
+        </div>
+    </div>
+    <br>
+
+    <!-- GAME -->
+    <div class="container game">
+        <h2>Game</h2>
+        <form class="row g-3" id="range">
+            <div class="col-auto w-40">
+                <label for="start" class="form-bale">Select Starting Number:</label>
+                <input type="number" class="form-control" id="start" name="start" placeholder="Enter Starting Number"
+                    required>
+            </div>
+            <div class="col-auto w-40">
+                <label for="end" class="form-bale">Select Ending Number:</label>
+                <input type="number" class="form-control" id="end" name="end" placeholder="Enter Ending Number"
+                    required>
+            </div>
+            <div class="col-mb-3">
+                <button type="submit" class="btn btn-primary">Select Random</button>
+            </div>
+        </form>
+        <hr>
+        <form id="guess-form">
+            <div class="mb-3 w-25">
+                <label for="guess" class="form-bale">Guess The Number:</label>
+                <input type="number" class="form-control" id="guess" name="guess" placeholder="Enter Your Guess"
+                    required disabled>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" disabled>Guess</button>
+            </div>
+        </form>
+        <hr>
+        <div id="decision" class="result" hidden>
+            <div class="alert" role="alert">
+                <h3 id="result"></h3>
+            </div>
+        </div>
+</body>
+
+<script src="./script.js">
+</script>
+
+</html>
